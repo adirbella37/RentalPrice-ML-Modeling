@@ -12,15 +12,25 @@ This project aims to predict apartment rental prices in Tel Aviv using machine l
 - Matplotlib & Seaborn — for visualizations
 - Pickle — to save the trained models
 
+## 📂 Project Structure
+
+| File/Folder                       | Description                                |
+|----------------------------------|--------------------------------------------|
+| `apartment_rent_prediction.ipynb` | Main Jupyter Notebook (data wrangling, feature engineering, modeling) |
+| `train.csv`                       | Training dataset                           |
+| `en_model.pkl`                    | Saved Elastic Net trained model            |
+| `README.md`                       | Project documentation                      |
+
 ## ▶️ How to run
 
 You can get this project in two ways:
 
 **Option 1 – Using Git**
 
-Clone or download this repository:
-
-https://github.com/adirbella37/Tel-Aviv-Apartments-Data-Scraping.git
+```bash
+git clone https://github.com/adirbella37/RentalPrice-ML-Modeling.git
+cd RentalPrice-ML-Modeling
+```
 
 **Option 2 – Download as ZIP**
 
@@ -28,3 +38,10 @@ https://github.com/adirbella37/Tel-Aviv-Apartments-Data-Scraping.git
 2. Select Download ZIP
 3. Extract the ZIP file on your computer
 
+## 📈 Key Insights
+- Elastic Net provided more stable predictions but with slightly lower accuracy.  
+- Decision Trees captured non-linear relationships but risked overfitting.  
+- Feature engineering (size, rooms, neighborhood distances) had the strongest impact on prediction accuracy.  
+
+## 📜 License
+This project is licensed under the MIT License.
