@@ -39,9 +39,11 @@ cd RentalPrice-ML-Modeling
 3. Extract the ZIP file on your computer
 
 ## 📈 Key Insights
-- Elastic Net provided more stable predictions but with slightly lower accuracy.  
-- Decision Trees captured non-linear relationships but risked overfitting.  
-- Feature engineering (size, rooms, neighborhood distances) had the strongest impact on prediction accuracy.  
+- **ElasticNet**: Regularization helped handle multicollinearity, but overall performance was weaker compared to tree-based models. Removing redundant features simplified the model without reducing accuracy.  
+- **XGBoost**: Outperformed all tested models (ElasticNet, Random Forest, Decision Tree, Gradient Boosting) with lower RMSE/MAE and higher R². Captured non-linear interactions and leveraged engineered features effectively.  
+- **Feature importance**: Both models ranked apartment area as the most critical feature. ElasticNet emphasized linear predictors like property type and room count, while XGBoost highlighted complex interactions (e.g., area × elevator, parking, AC, neighborhood).  
+- **Rare categories**: Grouping infrequent neighborhoods improved stability in XGBoost, while ElasticNet handled them well using Target Encoding with smoothing.  
+- **Model choice**: XGBoost was selected as the final model due to superior predictive performance and robustness to complex feature interactions.  
 
 ## 📜 License
 This project is licensed under the MIT License.
